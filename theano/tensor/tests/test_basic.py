@@ -19,7 +19,7 @@ from numpy.testing import dec, assert_array_equal, assert_allclose
 from distutils.version import LooseVersion
 
 import theano
-from theano.compat import PY3, exc_message, operator_div
+from theano.compat import PY3, exc_message, operator_div, reduce
 from theano.compat.six import StringIO
 from theano import compile, config, function, gof, tensor, shared
 from theano.compile import DeepCopyOp
