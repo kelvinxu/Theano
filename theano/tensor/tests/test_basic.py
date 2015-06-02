@@ -4126,7 +4126,7 @@ class test_comparison(unittest.TestCase):
                  numpy.nan, numpy.inf, -numpy.inf, numpy.inf],
                 dtype=dtype)
             r = numpy.asarray(
-                [0., 1.00001, -1.000000000001, numpy.nan,
+                [0., 1.0001, -1.000000000001, numpy.nan,
                  numpy.nan, numpy.inf, numpy.inf, 0.],
                 dtype=dtype)
             for x, y, err in [
@@ -4170,7 +4170,7 @@ class test_comparison(unittest.TestCase):
                  numpy.nan, numpy.inf, -numpy.inf, numpy.inf],
                 dtype=dtype)
             r = numpy.asarray(
-                [0., 1.00001, -1.000000000001, numpy.nan,
+                [0., 1.0001, -1.000000000001, numpy.nan,
                  numpy.nan, numpy.inf, numpy.inf, 0.],
                 dtype=dtype)
             for x, y, err in [
@@ -4183,9 +4183,7 @@ class test_comparison(unittest.TestCase):
                 try:
                     fn = inplace_func([], allclose(x, y, equal_nan=False))
                     v = fn()
-                    self.assertTrue(
-                        numpy.all(v == numpy.allclose(l, r)),
-                    )
+                    self.assertTrue(numpy.all(v == numpy.allclose(l, r)))
                 except TypeError:
                     if not dtype.startswith('complex'):
                         assert err
