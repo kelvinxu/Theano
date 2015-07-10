@@ -227,7 +227,6 @@ whitelist_flake8 = [
     "sparse/type.py",
     "sparse/__init__.py",
     "sparse/opt.py",
-    "sparse/basic.py",
     "sparse/tests/test_utils.py",
     "sparse/tests/test_opt.py",
     "sparse/tests/test_basic.py",
