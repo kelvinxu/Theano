@@ -62,8 +62,8 @@ cpu_contiguous = CpuContiguous()
 
 class CumsumOp(theano.Op):
     # See function cumsum for docstring
-    __props__=("axis")
-    
+    __props__ = ("axis")
+
     def __init__(self, axis=None):
         self.axis = axis
 
@@ -179,8 +179,8 @@ def cumsum(x, axis=None):
 
 class CumprodOp(theano.Op):
     # See function cumprod for docstring
-    __props__=("axis")
-    
+    __props__ = ("axis")
+
     def __init__(self, axis=None):
         self.axis = axis
 
@@ -298,8 +298,8 @@ def cumprod(x, axis=None):
 
 class DiffOp(theano.Op):
     # See function diff for docstring
-    __props__=("n", "axis")
-    
+    __props__ = ("n", "axis")
+
     def __init__(self, n=1, axis=-1):
         self.n = n
         self.axis = axis
@@ -373,7 +373,7 @@ class BinCountOp(theano.Op):
     compatible_type = ('int8', 'int16', 'int32', 'int64',
                        'uint8', 'uint16', 'uint32', 'uint64')
     """Tuple of all compatible dtype for the parameter of this op."""
-    __props__=("minlength")
+    __props__ = ("minlength")
 
     def __init__(self, minlength=None):
         self.minlength = minlength
@@ -561,8 +561,8 @@ def compress(condition, x, axis=None):
 
 class RepeatOp(theano.Op):
     # See the repeat function for docstring
-    __props__=("axis")
-    
+    __props__ = ("axis")
+
     def __init__(self, axis=None):
         self.axis = axis
 
@@ -734,8 +734,8 @@ def repeat(x, repeats, axis=None):
 
 class Bartlett(gof.Op):
     # See function bartlett for docstring
-    __props__=()
-    
+    __props__ = ()
+
     def __str__(self):
         return self.__class__.__name__
 
@@ -792,7 +792,7 @@ def bartlett(M):
 
 class FillDiagonal(gof.Op):
     # See function fill_diagonal for docstring
-    __props__=()
+    __props__ = ()
 
     def __str__(self):
         return self.__class__.__name__
@@ -876,7 +876,7 @@ def fill_diagonal(a, val):
 
 class FillDiagonalOffset(gof.Op):
     # See function fill_diagonal_offset for docstring
-    __props__=()
+    __props__ = ()
 
     def __str__(self):
         return self.__class__.__name__
